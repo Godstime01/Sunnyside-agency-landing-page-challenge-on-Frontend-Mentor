@@ -1,0 +1,357 @@
+*{
+    box-sizing: border-box;
+    font-size: 18px; /* added this line to change the default font size of the page to 18px */
+}
+
+/* :root{
+    --paragraph-color:;
+    links-color :;
+    --footer-bg-color:;
+} */
+
+body{
+    padding: 0;
+    margin: 0;
+    /* font-size: 18px; */
+    color: #333 !important; /* just to fix assessibility issue on contrast for the body*/
+}
+h2, h4{
+    color: hsl(212, 27%, 19%);
+    font-size: 2rem;
+}
+p{
+    color: #333/*hsl(232, 10%, 55%)*/;
+}
+/* header */
+header{
+    background-image: url(images/desktop/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+}
+ul.nav-a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* color: ; */
+    list-style-type: none;
+}
+.nav-a li .nav-links{
+    text-decoration: none;
+    color:hsl(0, 0%, 100%) /* white on blue is causing constrast accessibility issue*/;
+    font-size: 1.3rem;
+    /* font-weight: bolder; */
+    padding:5px;
+    margin:1px 20px;
+}
+#contact-btn {
+    background-color:white;
+    border:none;
+    color:hsl(212, 27%, 19%);
+    border-radius: 20px;
+    padding: 10px;
+    width:150px;
+    font-size: .9rem;
+    font-weight: bold; /* change this later*/
+    text-transform: uppercase;
+    transition: all 1s ease;
+    text-decoration: none;
+}
+#contact-btn:active,
+#contact-btn:focus,
+#contact-btn:hover{
+    background: transparent;
+    border:1px hsl(212, 27%, 19%) solid;
+    color:hsl(0, 0, 100%);
+    cursor: pointer;
+}
+/* hides navigation icon on desktop screen */
+span#icon{
+    display: none;
+    font-size: 2rem;
+}
+/* hero */
+.hero{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+}
+.hero h1{
+    font-size: 8rem;
+}
+.hero img{
+    height: 150px;
+}
+
+
+/* cont styles */
+.cont{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    'col-one col-two'
+    'col-three col-four'
+    'col-five col-six';
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+#col-one{
+    grid-area: col-one;
+}
+#col-two{
+    grid-area: col-two;
+}
+#col-three{
+    grid-area: col-three;
+}
+#col-four{
+    grid-area: col-four;
+}
+#col-five{
+    grid-area: col-five;
+}
+#col-six{
+    grid-area: col-six;
+}
+.col img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.col {
+    padding: 0;
+    height: auto;
+    width: auto;
+}
+.content{
+    padding:90px;
+    background-color: white;
+    color:black;
+    text-align: left;
+    height: 100%;
+    max-height:100% ;
+}
+.content p a{
+    text-transform: uppercase;
+    color:hsl(212, 27%, 19%);
+    font-weight: bold; /* change this line later*/
+    text-decoration-line: none;
+    transition: all 1s ease;
+}
+/* transform your brand hover effect style */
+.content p a:hover{
+    text-decoration-line: underline;
+     text-decoration-color:yellow;   
+}
+/* standout to the right audience learn more link hover effect style */
+.col:nth-child(4) .content p a:hover{
+    text-decoration-line: underline;
+    text-decoration-color:red;
+}
+.content p a:hover,
+.content p a:active,
+.content p a:focus{
+    cursor: pointer;
+}
+.graphic, .photography{
+    text-align: center;
+    padding-top: 300px;
+}
+.graphic{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-size: cover !important;
+    background-position: center;
+    color: hsl(167, 40%, 24%);
+}
+.photography{
+    background-image: url(images/desktop/image-photography.jpg);
+    background-size: cover !important;
+    background-position: center;
+    color:hsl(198, 62%, 26%);
+    justify-self: stretch;
+}
+/* test */
+.test{
+    padding: 100px;
+    text-align: center;
+}
+.card-groups{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+    align-items: center;
+}
+.test h2{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: black /*  CHANGE THIS COLORE LATERhsl(232, 10%, 55%) frontend mentor color is giving contrast issue so i opted for black*/;
+}
+/* testimonials heading */
+.card h4{
+    font-size: 1rem;
+}
+/* changes font-size of the second p which contains the person occupations */
+.card p:nth-of-type(2){
+    font-size: .8rem;
+    margin-top:4px;
+    align-items: flex-start;
+}
+.card-img{
+    border-radius: 50%;
+    width:50px;
+    height: 50px;
+    margin: auto;
+}
+
+/* gallery */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.gallery > img{
+    width: 100%;
+    object-fit: fill;
+    max-width: 100%;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding:50px;
+    color:hsl(168, 34%, 41%);
+    background-color: hsl(168, 48%, 65%);
+    margin:0;
+}
+.social-icons{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 300px;
+    margin: auto;
+    align-items: center;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    max-width: 300px;
+    margin:20px auto;
+}
+.footer-nav li a{
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+}
+.social-icons img:hover{
+    fill: hsl(0, 0, 100%) !important;
+}
+
+
+
+@media all and (max-width:500px){
+    /* In mobile the nav-links will disappear and the nav-icon will show on the left  */
+    header{
+        position: relative;
+        height: 70vh;
+    }
+    /* .nav-a should be position absolute to the header and displayed when the user clicks the nav-icon*/
+    ul.nav-a {
+        display: none;
+    }
+    .display-nav{
+        display: flex !important;
+        position: absolute;
+        top: 50px;
+        left:20px;
+        padding: 30px;
+        background-color: white;
+        flex-direction: column;
+        align-items: space-between;
+        width:300px;
+        clip-path: polygon(0 8%, 47% 8%, 92% 8%, 100% 0, 100% 100%, 0 100%);
+    }
+    ul.nav-a li{
+        padding:10px;
+        margin:3px;
+    }
+    /* nav-links */
+    ul.nav-a li a{
+        color: hsl(232, 10%, 55%)!important;
+        font-weight: bold; /* change this later*/
+    }
+    ul.nav-a li a:hover, 
+    ul.nav-a li a:active,
+    ul.nav-a li a:focus{
+        color: red!important;
+        font-weight: bold; /* change this later*/
+    }
+    ul.nav-a li button{
+        background-color:hsl(51, 100%, 49%) !important;
+    }
+    /* show icon */
+    span#icon{
+        display: block;
+        margin:0;
+        padding: 0;
+    }
+    /* cont styles */
+
+    .cont{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'col-two'
+        'col-one'
+        'col-three'
+        'col-four'
+        'col-five'
+        'col-six'
+    }
+
+
+    /* testimonials sections style for mobile devices */
+    .test{
+        padding:30px;
+    }
+    .test h2{
+        font-size: 1rem;
+    }
+    .card-groups{
+        grid-template-columns: 1fr;
+        margin-top:50px;
+    }
+
+    /* gallery section */
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* .footer-nav{
+        margin: auto;
+    }
+    .footer-nav li{
+        justify-content: space-between;
+        padding:5px 10px;
+    } */
+
+}
